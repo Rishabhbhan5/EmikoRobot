@@ -358,7 +358,7 @@ def help_button(update, context):
 
 def emiko_about_callback(update, context):
     query = update.callback_query
-    if query.data == "emiko_":
+    if query.data == "Jennie_":
         query.message.edit_text(
             text="๏ I'm *Jennie*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
@@ -367,7 +367,7 @@ def emiko_about_callback(update, context):
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emiko's licensed under the GNU General Public License v3.0_"
+            "\n\n_Jennie's licensed under the GNU General Public License v3.0_"
             "\n\n Click on button bellow to get basic help for JennieRobot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -385,12 +385,12 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Federation", url="https://t.me/ronaldofedban"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="Jennie_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "emiko_back":
+    elif query.data == "Jennie_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -405,7 +405,7 @@ def emiko_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "emiko_admin":
+    elif query.data == "Jennie_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
             "\nCongragulations, JennieRobot now ready to manage your group."
@@ -418,7 +418,7 @@ def emiko_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="Jennie_")]]
             ),
         )
 
@@ -473,15 +473,15 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Rishu", url="https://t.me/Rishu05Bot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
+                    InlineKeyboardButton(text="Jennie", url="https://t.me/JennieKimMusicBot"),
+                    InlineKeyboardButton(text="Rishu", url="https://t.me/Rishu05Bot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
+                    InlineKeyboardButton(text="Jennie", url="https://t.me/JennieKimMusicBot"),
+                    InlineKeyboardButton(text="Rishu", url="https://t.me/Rishu05Bot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="Jennie_"),
                  ]
                 ]
             ),
@@ -798,7 +798,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**Emiko Robot Started!**
+                f"""**Jennie Robot Started!**
 
 **Python:** `{memek()}`
 **Telegram Library:** `v{peler}`""",
